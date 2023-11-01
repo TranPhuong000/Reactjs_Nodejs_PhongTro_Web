@@ -3,19 +3,24 @@ import { text } from '../../ultils/constant'
 import { Province, ItemSidebar, RelatedPost } from '../../components'
 import { List, Pagination } from './index'
 import { useSelector } from 'react-redux'
+import { Search } from './index'
+import {useLocation } from 'react-router-dom'
+import { path } from '../../ultils/constant'
 
 
 const Homepage = () => {
+    const location = useLocation()
     const { categories, prices, areas } = useSelector(state => state.app)
     const { posts, count } = useSelector(state => state.post)
 
     return (
         <div className='w-full flex flex-col gap-3' >
             <div>
-                <h1 className='text-[28px] font-bold' >{text.HOME_TITLE}</h1>
-                <p className='text-base text-gray-700'>{text.HOME_DESCRIPTION}</p>
+                <h1 className='text-[28px] font-bold text-center' >{text.HOME_TITLE}</h1>
+                <p className='text-base text-gray-700 text-center'>{text.HOME_DESCRIPTION}</p>
             </div>
             <Province />
+            {location.pathname !== `/${path.CONTACT}` && location.pathname !== `/${path.LOGIN}` && !location.pathname?.includes(path.DETAIL) && !location.pathname?.includes(path.WISHLIST) && <Search />}  
             <div className='w-full flex gap-4'>
                 <div className='w-[70%]'>
                     <List />

@@ -5,6 +5,8 @@ import { List, Pagination } from './index'
 import { useSelector, useDispatch } from 'react-redux'
 import { useLocation } from 'react-router-dom'
 import { formatVietnameseToString } from '../../ultils/Common/formatVietnameseToString'
+import { path } from '../../ultils/constant'
+import { Search } from './index'
 
 const Rental = () => {
     const { prices, areas, categories } = useSelector(state => state.app)
@@ -24,10 +26,11 @@ const Rental = () => {
     return (
         <div className='w-full flex flex-col gap-3' >
             <div>
-                <h1 className='text-[28px] font-bold' >{categoryCurrent?.header}</h1>
-                <p className='text-base text-gray-700'>{categoryCurrent?.subheader}</p>
+                <h1 className='text-[28px] font-bold text-center' >{categoryCurrent?.header}</h1>
+                <p className='text-base text-gray-700 text-center'>{categoryCurrent?.subheader}</p>
             </div>
             <Province />
+            {location.pathname !== `/${path.CONTACT}` && location.pathname !== `/${path.LOGIN}` && !location.pathname?.includes(path.DETAIL) && !location.pathname?.includes(path.WISHLIST) && <Search />}  
             <div className='w-full flex gap-4'>
                 <div className='w-[70%]'>
                     <List categoryCode={categoryCode} />

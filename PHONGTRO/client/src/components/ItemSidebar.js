@@ -36,15 +36,17 @@ const ItemSidebar = ({ title, content, isDouble, type }) => {
 
 
     return (
-        <div className='p-4 rounded-md bg-white w-full'>
-            <h3 className='text-lg font-semibold mb-4'>{title}</h3>
-            {!isDouble && <div className='flex flex-col gap-2' >
+        <div className='rounded-md w-full'>
+            <div className='w-full border rounded-t-2xl bg-secondary1'>
+                <h3 className='text-lg font-semibold p-2 text-center text-white'>{title}</h3>
+            </div>
+            {!isDouble && <div className='flex flex-col gap-2 border bg-slate-100 rounded-b-2xl pl-2' >
                 {content?.length > 0 && content.map(item => {
                     return (
                         <Link
                             to={`${formatVietnameseToString(item.value)}`}
                             key={item.code}
-                            className='flex gap-2 items-center cursor-pointer hover:text-orange-600 border-b border-gray-200 pb-1 border-dashed'
+                            className='flex gap-2 items-center mt-1 cursor-pointer hover:text-orange-600'
                         >
                             <GrNext size={10} color='#ccc' />
                             <p>{item.value}</p>
@@ -52,20 +54,20 @@ const ItemSidebar = ({ title, content, isDouble, type }) => {
                     )
                 })}
             </div>}
-            {isDouble && <div className='flex flex-col gap-2' >
+            {isDouble && <div className='flex flex-col gap-2 border bg-slate-100 rounded-b-2xl pl-2' >
                 {content?.length > 0 && formatContent(content).map((item, index) => {
                     return (
                         <div key={index} className=''>
                             <div className=' flex items-center justify-around'>
                                 <div
                                     onClick={() => handleFilterPosts(item.left.code)}
-                                    className='flex flex-1 gap-2 items-center cursor-pointer hover:text-orange-600 border-b border-gray-200 pb-1 border-dashed'
+                                    className='flex flex-1 gap-2 items-center mt-1 cursor-pointer hover:text-orange-600'
                                 >
                                     <GrNext size={10} color='#ccc' />
                                     <p>{item.left.value}</p>
                                 </div>
                                 <div
-                                    className='flex flex-1 gap-2 items-center cursor-pointer hover:text-orange-600 border-b border-gray-200 pb-1 border-dashed'
+                                    className='flex flex-1 gap-2 items-center mt-1 cursor-pointer hover:text-orange-600'
                                     onClick={() => handleFilterPosts(item.right.code)}
                                 >
                                     <GrNext size={10} color='#ccc' />

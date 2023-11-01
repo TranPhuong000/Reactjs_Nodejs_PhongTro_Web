@@ -4,25 +4,27 @@ import { memuSidebar } from '../../ultils/constant'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { AiOutlineLogout } from 'react-icons/ai'
 
-const activeStyle = 'font-medium px-[10px] gap-4 h-[40px] flex items-center hover:bg-gray-200 bg-gray-200'
-const notActiceStyle = 'font-medium px-[10px] gap-4 h-[40px] flex items-center hover:bg-gray-200 cursor-pointer'
+const activeStyle = 'font-medium px-[10px] gap-5 h-[40px] flex items-center text-red-500 border-b-2 border-blue-500 border-transparent rounded-xl'
+const notActiceStyle = 'font-medium px-[10px] gap-5 h-[40px] flex items-center hover:text-red-500 border-b-2 hover:border-blue-500 border-transparent hover:rounded-xl cursor-pointer'
 
 const AdminSidebar = ({ admin }) => {
     const navigate = useNavigate()
     const { currentData } = useSelector(state => state.user)
     return (
-        <div className='flex-none p-4 flex flex-col gap-6 bg-white min-h-screen'>
-            <div className='flex flex-col gap-4'>
+        <div className='flex-none flex flex-col gap-6 bg-white max-h-screen'>
+            <div className=' bg-secondary1 border rounded-xl py-5 flex flex-col items-center justify-center'>
+                <img src={currentData?.avatar} alt="avatar" className='w-20 h-20 object-cover rounded-full border-2 border-white' />
                 <div className='flex items-center gap-4'>
-                    <img src={currentData?.avatar} alt="avatar" className='w-12 h-12 object-cover rounded-full border-2 border-white' />
-                    <div className='flex flex-col justify-center'>
-                        <span className='font-semibold'>{currentData?.name}</span>
-                        <small>{currentData?.phone}</small>
+                    
+                    <div className='flex flex-col items-center justify-center'>
+                        <span className='text-white font-semibold'>{currentData?.name}</span>
+                        <small className='text-white'>{currentData?.phone}</small>
                     </div>
                 </div>
-                <span >Mã thành viên: <small className='font-medium'>{currentData?.id?.toUpperCase()}</small></span>
+                <span className='text-white' >Mã thành viên: <small className='font-medium text-red-400'>{currentData?.id?.toUpperCase()}</small></span>
             </div>
-            <div>
+
+            <div className='h-screen bg-white py-5 text-black px-3'>
                 {memuSidebar?.map(item => {
                     return (
                         <NavLink

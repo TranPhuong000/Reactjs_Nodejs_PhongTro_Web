@@ -13,7 +13,7 @@ const Sitem = ({ title, price, image, createdAt, star, id }) => {
     }
     const handleStar = (star) => {
         let stars = []
-        for (let i = 1; i <= +star; i++) stars.push(<GrStar className='star-item' size={18} color='yellow' />)
+        for (let i = 1; i <= +star; i++) stars.push(<GrStar className='star-item' size={18} color='#eab308' />)
         return stars
 
     }

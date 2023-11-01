@@ -39,8 +39,8 @@ const List = ({ categoryCode }) => {
             </div>
             <div className='flex items-center gap-2 my-2'>
                 <span>Sắp xếp:</span>
-                <span onClick={() => setSort(0)} className={`bg-gray-200 p-2 rounded-md cursor-pointer hover:underline ${sort === 0 && 'text-red-500'}`}>Mặc định</span>
-                <span onClick={() => setSort(1)} className={`bg-gray-200 p-2 rounded-md cursor-pointer hover:underline ${sort === 1 && 'text-red-500'}`}>Mới nhất</span>
+                <span onClick={() => setSort(0)} className={`bg-gray-200 p-2 rounded-md cursor-pointer hover:underline hover:bg-blue-200 hover:text-red-500 ${sort === 0 && 'text-white bg-blue-800'}`}>Mặc định</span>
+                <span onClick={() => setSort(1)} className={`bg-gray-200 p-2 rounded-md cursor-pointer hover:underline hover:bg-blue-200 hover:text-red-500 ${sort === 1 && 'text-white bg-blue-800'}`}>Mới nhất</span>
             </div>
             <div className='items'>
                 {posts?.length > 0 && posts.map(item => {

@@ -6,12 +6,15 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        '1100': '1100px'
+        '1100': '1100px',
+        '1000': '1000px'
       },
       backgroundColor: {
-        primary: '#F5F5F5',
-        secondary1: '#1266dd',
-        secondary2: '#f73859',
+        // primary: '#F5F5F5',
+        // secondary1: '#1266dd',
+        // secondary2: '#f73859',
+        secondary1: '#0045a8',
+        secondary2: '#AAC4FF',
         'overlay-30': 'rgba(0,0,0,0.3)',
         'overlay-70': 'rgba(0,0,0,0.7)',
       },

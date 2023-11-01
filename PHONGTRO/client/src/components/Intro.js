@@ -48,7 +48,7 @@ const Intro = () => {
                 {star.map(item => {
                     return (
                         <span key={item}>
-                            <GrStar size={24} color='yellow' />
+                            <GrStar size={24} color='#eab308' />
                         </span>
                     )
                 })}
