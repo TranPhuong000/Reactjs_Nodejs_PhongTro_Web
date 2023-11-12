@@ -7,6 +7,14 @@
     margin-bottom: 6px;
 }
 
+input[type="text"]:focus ~ .input-text{
+    @apply text-blue-800 bg-white transform -translate-y-[10px] -translate-x-[10px] scale-75;
+}
+input[type="password"]:focus ~ .input-text{
+    @apply text-blue-800 bg-white transform -translate-y-[10px] -translate-x-[10px] scale-75;
+} 
+
+
 input[type="range"]::-webkit-slider-runnable-track {
     -webkit-appearance: none;
     height: 5px;

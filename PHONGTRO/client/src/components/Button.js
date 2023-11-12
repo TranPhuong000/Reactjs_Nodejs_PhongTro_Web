@@ -5,7 +5,7 @@ const Button = ({ text, textColor, bgColor, IcAfter, onClick, fullWidth, px, IcB
     return (
         <button
             type='button'
-            className={`py-1 ${px ? px : 'px-2'} ${textColor} ${bgColor} ${fullWidth && 'w-full'} ${gradientColorStops} ${width} outline-none rounded-md text-base`}
+            className={`py-2 ${px ? px : 'px-2'} ${textColor} ${bgColor} ${fullWidth && 'w-full'} ${gradientColorStops} ${width} outline-none rounded-md text-base`}
             onClick={onClick}
         >
             {IcBefore && <span><IcBefore /></span>}

@@ -31,26 +31,26 @@ const Dashboard = () => {
     }
     return (
         <div className='relative bg-white p-4 h-full'>
-            <div className='flex items-center justify-between border-b-2 border-blue-800'>
+            <div className='flex items-center justify-between border-b border-slate-200'>
                 <h3 className='font-bold text-[30px] pb-4'>Tổng quan</h3>
             </div>
             <div className='py-8'>
                 <div className='flex gap-4 items-center'>
-                    <div className='flex-1 border bg-white rounded-md shadow-b shadow-blue-800 flex p-4 items-center justify-between'>
+                    <div className='flex-1 border border-l-4 border-[#D83F31] bg-white rounded-md shadow-b shadow-blue-800 flex p-4 items-center justify-between'>
                         <span className='flex flex-col'>
                             <span className='text-[24px] text-main font-bold'>{data?.views || 0}</span>
                             <span className='text-sm text-gray-500 font-medium'>SỐ LƯỢT TRUY CẬP</span>
                         </span>
                         <HiUserGroup size={30}  />
                     </div>
-                    <div className='flex-1 border bg-white rounded-md shadow-b shadow-blue-800 flex p-4 items-center justify-between'>
+                    <div className='flex-1 border border-l-4 border-[#B5CB99] bg-white rounded-md shadow-b shadow-blue-800 flex p-4 items-center justify-between'>
                         <span className='flex flex-col'>
                             <span className='text-[24px] text-main font-bold'>{data?.postCount || 0}</span>
                             <span className='text-sm text-gray-500 font-medium'>SỐ BÀI ĐĂNG</span>
                         </span>
                         <MdOutlinePostAdd size={30} />
                     </div>
-                    <div className='flex-1 border bg-white rounded-md shadow-b shadow-blue-800 flex p-4 items-center justify-between'>
+                    <div className='flex-1 border border-l-4 border-indigo-500/50 bg-white rounded-md shadow-b shadow-blue-800 flex p-4 items-center justify-between'>
                         <span className='flex flex-col'>
                             <span className='text-[24px] text-main font-bold'>{data?.userCount || 0}</span>
                             <span className='text-sm text-gray-500 font-medium'>THÀNH VIÊN</span>

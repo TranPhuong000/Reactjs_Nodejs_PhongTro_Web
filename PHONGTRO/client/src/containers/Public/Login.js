@@ -92,23 +92,28 @@ const Login = () => {
                 </div>
             </div>}
             <div className='bg-white w-[600px] p-[30px] pb-[100px] rounded-md shadow-sm'>
-                <h3 className='font-semibold text-2xl mb-3'>{isRegister ? 'Đăng kí tài khoản' : 'Đăng nhập'}</h3>
+                <h3 className='font-semibold text-2xl mb-10 text-center'>{isRegister ? 'Đăng kí tài khoản' : 'Đăng nhập'}</h3>
                 <div className='w-full flex flex-col gap-5'>
                     {isRegister && <InputForm
+                        placeholder=''
                         setInvalidFields={setInvalidFields}
-                        invalidFields={invalidFields} label={'HỌ TÊN'}
+                        invalidFields={invalidFields} 
+                        label={'HỌ VÀ TÊN'}
                         value={payload.name}
                         setValue={setPayload}
                         keyPayload={'name'}
                     />}
                     {isRegister && <InputForm
+                        placeholder=''
                         setInvalidFields={setInvalidFields}
-                        invalidFields={invalidFields} label={'EMAIL'}
+                        invalidFields={invalidFields} 
+                        label={'TÀI KHOẢN EMAIL'}
                         value={payload.email}
                         setValue={setPayload}
                         keyPayload={'email'}
                     />}
                     <InputForm
+                        placeholder=''
                         setInvalidFields={setInvalidFields}
                         invalidFields={invalidFields}
                         label={'SỐ ĐIỆN THOẠI'}
@@ -117,9 +122,10 @@ const Login = () => {
                         keyPayload={'phone'}
                     />
                     <InputForm
+                        placeholder=''
                         setInvalidFields={setInvalidFields}
                         invalidFields={invalidFields}
-                        label={'MẬT KHÂU'}
+                        label={'MẬT KHẨU'}
                         value={payload.password}
                         setValue={setPayload}
                         keyPayload={'password'}
@@ -133,7 +139,7 @@ const Login = () => {
                         onClick={handleSubmit}
                     />
                 </div>
-                <div className='mt-7 flex items-center justify-between'>
+                <div className='mt-7 flex items-center justify-between text-xl'>
                     {isRegister
                         ? <small>Bạn đã có tài khoản? <span
                             onClick={() => {
