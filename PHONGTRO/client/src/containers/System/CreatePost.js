@@ -124,7 +124,7 @@ const CreatePost = ({ isEdit }) => {
                         dispatch(resetDataEdit())
                     })
                 } else {
-                    Swal.fire('Oops!', 'Có lỗi gì đó', 'error')
+                    Swal.fire('Lỗi!', 'Có lỗi gì đó', 'error')
                 }
 
             } else {
@@ -134,7 +134,7 @@ const CreatePost = ({ isEdit }) => {
                         resetPayload()
                     })
                 } else {
-                    Swal.fire('Oops!', 'Có lỗi gì đó', 'error')
+                    Swal.fire('Lỗi!', 'Có lỗi gì đó', 'error')
                 }
             }
         }
@@ -165,7 +165,7 @@ const CreatePost = ({ isEdit }) => {
                     <Overview invalidFields={invalidFields} setInvalidFields={setInvalidFields} payload={payload} setPayload={setPayload} />
                     <div className='w-full mb-6'>
                         <h2 className='font-semibold text-xl py-4'>Hình ảnh</h2>
-                        <small>Cập nhật hình ảnh rõ ràng sẽ cho thuê nhanh hơn</small>
+                        <small>Cập nhật nhiều hơn 3 hình ảnh</small>
                         <div className='w-full'>
                             <label className='w-full border-2 h-[200px] my-4 gap-4 flex flex-col items-center justify-center border-gray-400 border-dashed rounded-md' htmlFor="file">
                                 {isLoading

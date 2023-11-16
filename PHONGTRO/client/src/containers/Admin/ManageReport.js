@@ -109,7 +109,7 @@ const ManageReport = () => {
                                         >
                                             <option value="Pending">Pending</option>
                                             <option value="Accepted">Accepted</option>
-                                            <option value="Canceled">Cancelled</option>
+                                            {/* <option value="Canceled">Cancelled</option> */}
                                         </select>
                                         : <div
                                             className={`w-[90px] cursor-pointer ${item.status === 'Accepted'

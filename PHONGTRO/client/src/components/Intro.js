@@ -57,12 +57,12 @@ const Intro = () => {
             <span className='text-gray-700'>{text.author}</span>
             <h3 className='font-bold text-lg py-2'>{text.question}</h3>
             <p>{text.answer}</p>
-            <Button
+            {/* <Button
                 text='Đăng tin ngay'
                 bgColor='bg-secondary2'
                 textColor='text-white'
                 px='px-6'
-            />
+            /> */}
             <div className='h-12'></div>
         </div>
     )

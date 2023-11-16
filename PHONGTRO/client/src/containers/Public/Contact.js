@@ -21,19 +21,19 @@ const Contact = () => {
             <div className='flex flex-wrap gap-4 justify-between'>
                 <span className='flex gap-2 w-[47%] flex-auto py-2 px-4 border items-center'>
                     <span className='font-medium'>Admin:</span>
-                    <span>Tên của mình</span>
+                    <span>Kiều Oanh KO</span>
                 </span>
                 <span className='flex gap-2 w-[47%] flex-auto py-2 px-4 border items-center'>
                     <span className='font-medium'>Phone:</span>
-                    <a className='text-blue-500 hover:underline' href='tel:phone'>SĐT</a>
+                    <a className='text-blue-500 hover:underline' href='tel:phone'>0346168393</a>
                 </span>
                 <span className='flex gap-2 w-[47%] flex-auto py-2 px-4 border items-center'>
                     <span className='font-medium'>Email:</span>
-                    <a className='text-blue-500 hover:underline' href='mailto:mymail'>My mail</a>
+                    <a className='text-blue-500 hover:underline' href='mailto:mymail'>vooanh356@gmail.com</a>
                 </span>
                 <span className='flex gap-2 w-[47%] flex-auto py-2 px-4 border items-center'>
                     <span className='font-medium'>Zalo:</span>
-                    <a className='text-blue-500 hover:underline' target='_blank' href='https://zalo.me/SĐT'>Tran Binh Minh</a>
+                    <a className='text-blue-500 hover:underline' target='_blank' href='https://zalo.me/0346168393'>Kiều Oanh</a>
                 </span>
             </div>
         </div>

@@ -41,7 +41,7 @@ const VoteAndComment = ({ votes, star, setIsVote }) => {
                         if (isLoggedIn) {
                             setIsVote(true)
                         } else {
-                            Swal.fire('Oops', 'Hãy đăng nhập để đánh giá nào ~', 'info').then(() => {
+                            Swal.fire('Lỗi', 'Hãy đăng nhập để đánh giá nào ~', 'info').then(() => {
                                 navigate(`/${path.LOGIN}`)
                             })
                         }

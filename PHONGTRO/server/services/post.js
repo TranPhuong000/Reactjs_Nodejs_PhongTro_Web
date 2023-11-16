@@ -370,13 +370,13 @@ export const updateWishlist = ({ pid, uid }) => new Promise(async (resolve, reje
             const response = await db.Wishlist.destroy({ where: { pid, uid } })
             resolve({
                 err: response > 0 ? 0 : 1,
-                msg: response > 0 ? 'Update your wishlist' : 'Something went wrong',
+                msg: response > 0 ? 'Xóa khỏi mục yêu thích' : 'Lỗi',
             })
         } else {
             const response = await db.Wishlist.create({ pid, uid })
             resolve({
                 err: response ? 0 : 1,
-                msg: response ? 'Update your wishlist' : 'Something went wrong',
+                msg: response ? 'Đang thêm vào mục yêu thích' : 'Lỗi',
             })
         }
     } catch (error) {

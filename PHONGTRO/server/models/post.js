@@ -48,7 +48,7 @@ module.exports = (sequelize, DataTypes) => {
         expired: DataTypes.DATE,
         status: {
             type: DataTypes.ENUM,
-            values: ['ACTIVE', 'RENTED']
+            values: ['HOẠT ĐỘNG', 'ĐÃ THUÊ']
         },
     }, {
         sequelize,

@@ -16,7 +16,7 @@ const ResetPass = () => {
                 navigate(`/${path.LOGIN}`)
             })
         } else {
-            Swal.fire('Oops', response.data.mes, 'error').then(() => {
+            Swal.fire('Lỗi!', response.data.mes, 'error').then(() => {
                 navigate(`/${path.LOGIN}`)
             })
         }

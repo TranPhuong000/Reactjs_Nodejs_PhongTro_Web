@@ -34,12 +34,12 @@ const Login = () => {
 
     useEffect(() => {
         setIsLoading(false)
-        msg && Swal.fire('Oops !', msg, 'error')
+        msg && Swal.fire('Lỗi !', msg, 'error')
     }, [msg, update])
 
     const handleForgotPassword = async () => {
         const response = await apiForgotPassword({ email })
-        Swal.fire('Almost...', response.data.mes, 'info').then(() => {
+        Swal.fire('Thông báo', response.data.mes, 'info').then(() => {
             setIsForgot(false)
         })
     }
@@ -59,7 +59,7 @@ const Login = () => {
             setIsLoading(true)
             if (isRegister) {
                 const response = await apiRegister(payload)
-                Swal.fire('Well~', response.data.msg, 'info').then(() => { setIsLoading(false) })
+                Swal.fire('Thành công', response.data.msg, 'info').then(() => { setIsLoading(false) })
             } else {
                 dispatch(actions.login(payload))
             }

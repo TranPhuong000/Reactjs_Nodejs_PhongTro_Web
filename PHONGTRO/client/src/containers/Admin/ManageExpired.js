@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Pagination from '../Public/Pagination'
 import { apiGetExpireds, apiPlusExpired } from '../../services'
+import { apiUpdateReport, apiGetReports, apiRemoveReport } from '../../services'
 import moment from 'moment'
 import { useSearchParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
@@ -104,7 +105,7 @@ const ManageExpired = () => {
                                         ? <select className='border p-2' value={payload.status} onClick={e => e.stopPropagation()} onChange={e => setPayload(prev => ({ ...prev, status: e.target.value }))} >
                                             <option value="Pending">Pending</option>
                                             <option value="Accepted">Accepted</option>
-                                            <option value="Cancelled">Cancelled</option>
+                                            {/* <option value="Cancelled">Cancelled</option> */}
                                         </select>
                                         : <div
                                             className={`w-[90px] cursor-pointer ${item.status === 'Accepted'
@@ -123,7 +124,7 @@ const ManageExpired = () => {
                                 <td className={`p-2 ${index % 2 === 0 ? '' : 'bg-gray-100'} m-auto`}>
                                     {item?.status !== 'Pending' && <span
                                         className='p-2 cursor-pointer text-blue-500 hover:underline'
-                                    // onClick={() => deletePost(item.id)}
+                                    //  onClick={() => deletePost(item.id)}
                                     >Xóa</span>}
                                 </td>
                             </tr>

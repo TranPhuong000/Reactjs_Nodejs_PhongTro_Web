@@ -73,11 +73,11 @@ const ManagePost = () => {
                     <p className='p-2 border-blue-500 border rounded-md text-justify text-sm bg-blue-100 text-blue-800'>
                         Gia hạn ngày đăng bài, người đăng có thể chọn 2 phương án dưới đây:
                         <ul className='italic'>
-                            <li><span className='font-bold'>Thanh toán nhanh:</span> Thanh toán trực tiếp qua paypal và bài đăng sẽ ngay lập tức được cộng thêm số ngày được gian hạn tính từ hôm nay</li>
+                            {/* <li><span className='font-bold'>Thanh toán nhanh:</span> Thanh toán trực tiếp qua paypal và bài đăng sẽ ngay lập tức được cộng thêm số ngày được gian hạn tính từ hôm nay</li> */}
                             <li><span className='font-bold'>Thanh toán offline:</span> Người đăng bài đăng ký với hệ thống số ngày đăng muốn gian hạn, và liên hệ Admin để trao đổi thanh toán.</li>
                         </ul>
                         <br />
-                        <span>{`Giá tiền gia hạn: ${process.env.REACT_APP_GIA_HAN}vnđ/ngày`}</span>
+                        <span>{`Giá tiền gia hạn: ${process.env.REACT_APP_GIA_HAN} USD/ngày`}</span>
                     </p>
                     <span>Nhập số ngày bạn muốn gia hạn:</span>
                     <div>
@@ -94,7 +94,7 @@ const ManagePost = () => {
                     >
                         Gia hạn
                     </button>
-                    <div className='w-full'>
+                    {/* <div className='w-full'>
                         <h2>Chọn phương thức gia hạn</h2>
                         <Paypal
                             amount={price * process.env.REACT_APP_GIA_HAN}
@@ -104,12 +104,12 @@ const ManagePost = () => {
                             setUpdateData={setUpdateData}
 
                         />
-                    </div>
+                    </div> */}
                 </div>
             </div>}
             <div className='py-4 border-b border-gray-200 flex items-center justify-between'>
                 <h1 className='text-3xl font-medium '>Quản lý tin đăng</h1>
-                <div className='text-sm p-4 rounded-md text-blue-800 bg-blue-200 italic'>Sau khi xác nhận gia hạn, vui lòng chủ trọ hãy bank tiền gia hạn theo <a className='text-blue-500 hover:underline' href='http://zalo.me/0862434001'>tài khoản này</a> để admin duyệt nhé ~</div>
+                <div className='text-sm p-4 rounded-md text-blue-800 bg-blue-200 italic'>Sau khi xác nhận gia hạn, vui lòng chủ trọ hãy bank tiền gia hạn qua <a className='text-blue-500 hover:underline' href='http://zalo.me/0862434001'>thông tin liên hệ</a> để admin duyệt nhé ~</div>
                 <select onChange={e => setStatus(+e.target.value)} value={status} className='outline-none border p-2 border-gray-200 rounded-md'>
                     <option value="">Lọc theo trạng thái</option>
                     <option value="1">Đang hoạt động</option>

@@ -79,7 +79,7 @@ export const forgotPassword = (email) => new Promise(async (resolve, reject) => 
             })
             resolve({
                 err: updated[0] > 0 ? 0 : 1,
-                mes: updated[0] ? 'Vui lòng check mail của bạn.' : 'Something went wrong!'
+                mes: updated[0] ? 'Vui lòng check mail của bạn.' : 'Có gì đó không đúng!'
             })
             await sendMail({ email, html, subject })
         } else {
